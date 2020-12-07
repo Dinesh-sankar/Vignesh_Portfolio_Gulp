@@ -1,0 +1,579 @@
+@import url('./fonts.css');
+
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    /*---Theme color---*/
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight: #409af1;
+
+    /*---gradient color---*/
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --Azure: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    --Bleach: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    --Blues: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+
+    /*---Theme Font-family---*/
+    --Lato:'Lato',cursive; 
+    --Nunito:'Nunito',cursive;
+    --Roboto:'Roboto',cursive;
+    --Poppins:'Poppins',cursive;
+}
+
+/*------------Global Class---------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Nunito);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--Nunito);
+    font-size: 1.5rem;
+}
+
+h2{
+    font-family: var(--Nunito);
+    font-size: 1.5rem ;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--Nunito);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--Nunito);
+    font-size: 130%;
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: var(--Nunito);
+    color: var(--text-light);
+}
+
+/*------------Global Class---------*/
+
+/*------------Nav Bar--------------*/
+
+.nav{
+    background-color: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 11vh;
+    overflow: hidden;
+    transition: height 0.8s ease-in-out;
+
+    .nav-menu{
+        justify-content: space-between;
+    }
+
+    .toggle-collapse{
+        position: absolute;
+        top: 0%;
+        width: 90%;
+        cursor: pointer;
+        display: none;
+
+        .toggle-icons{
+            display: flex;
+            justify-content: flex-end;
+            padding: 1.7rem 0;
+
+            i{
+                font-size: 1.4rem;
+                color: var(--text-gray);
+            }
+
+        }
+
+    }
+
+    .nav-items{
+        display: flex;
+        margin: 0rem;
+        padding: 0.3rem 0rem;
+
+        .nav-links{
+            padding: 0.8rem 1rem;
+            font-size: 1.2rem;
+            position: relative;
+            font-family: var(--Poppins);
+            transition: all 0.4s ease 0s;
+
+            &:hover{
+                background-color: var(--midnight);
+                transition: all 0.4s ease 0s;
+                padding: 15px 10px;
+                border: none;
+                border-radius: 4rem;
+
+            }
+
+        }
+
+    }
+
+    .nav-brand a{
+        font-size: 2rem;
+        padding: 1.2rem 0;
+        display: block;   
+        font-family: var(--Lato);
+    }
+
+    .social{
+        padding: 1.4rem 0;
+        font-size: 1.6rem;
+    }
+
+}
+
+/*Increases the height of the header when clicks on the toggle button when screen becomes size less than 750px*/
+
+.collapse{
+    height: 27rem;
+}
+
+/*Increases the height of the header when clicks on the toggle button when screen becomes size less than 750px*/
+
+.nav .nav-items .nav-links:hover a{
+    color: var(--white);
+    transition: all 0.4s ease 0s;
+    padding: 20px 10px;
+}
+
+.nav .social i{
+    padding: 0.4rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+/*------------Nav Bar--------------*/
+
+/*------------Main Section--------------*/
+
+/*------------Site Title----------------*/
+
+main .site-title{
+    background: url('../assets/25.jpg');
+    background-size: cover;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+
+    .site-background{
+        padding: 3rem;
+        color: var(--white);
+    }
+
+    .btn{
+        margin: 0.3rem;
+        background: var(--sky);
+
+        &:hover{
+            background: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
+    }
+
+}
+
+main .site-title h1,h2,h3{
+    margin: 0.1rem;
+}
+
+/*------------Site Title----------------*/
+
+/*------------Blog Carousel-------------*/
+
+main .blog{
+    background: url('../assets/77.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;    
+    background-size: 100%;
+
+    .blog-post{
+        padding-top: 2.5rem;
+    }
+
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--white);
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+
+/*------------Blog Carousel-------------*/
+
+/*****************Site Content***************/
+
+main .site-content{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    margin-top: 2rem;
+}
+
+main .post-content{
+    width: 100%;
+}
+
+main .site-content .post-content>.post-image,.post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main .site-content .post-content>.post-image .post-info{
+    background: var(--Azure);
+    padding: 0.3rem;
+    position: absolute;
+    bottom: 0%;
+    left: 19vw;
+    border-radius: 3rem;
+}
+
+main .site-content .post-content>.post-image>div{
+    overflow: hidden;
+}
+
+main .site-content .post-content>.post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+main .site-content .post-content>.post-image .img:hover{
+    transform: scale(1.3);
+}
+
+main .site-content .post-content>.post-image .post-info span{
+    margin: 0.3rem;
+}
+
+main .post-content .post-title a{
+    font-family: var(--Poppins);
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.site-content .post-content .post-title .post-btn{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--sky);
+}
+
+/*****************Site Content***************/
+
+/*****************Side Bar*****************/
+
+.site-content .sidebar .category-list{
+    font-family: var(--Nunito);
+    font-size: 1rem;
+}
+
+.site-content>.sidebar .category-list .list-items{
+    background: var(--Bleach);
+    padding: .4rem 1rem;
+    margin: .8rem 2rem;
+    border-radius: 3rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content>.sidebar .category-list .list-items a{
+    color: black;
+}
+
+.site-content .sidebar .awards .post-content{
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .awards{
+    padding-top: 5rem;
+}
+
+.site-content .sidebar .awards .post-info{
+    padding-top: .4rem .1rem!important;
+    bottom: 0rem!important;
+    left: 1.5rem!important;
+    border-radius: 0rem!important;
+    background: white!important;
+}
+
+.site-content .sidebar .awards .post-title a{
+    font-size: 1rem;
+}
+
+.site-content .sidebar .message{
+    padding-top: 1rem;
+}
+
+.site-content .sidebar .message .form-element{
+    padding: .5rem 2rem;
+    margin-left: 0.1rem;
+}
+
+.site-content .sidebar .message .input-element{
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-family: var(--Nunito);
+    font-size: 1rem;
+}
+
+.site-content .sidebar .message .form-btn{
+    border-radius: 1rem;
+    padding: .8rem 37.5%;
+    margin: 1rem 0;
+    background: var(--Azure);
+}
+
+.site-content .sidebar .softwares{
+    padding: 2rem 0;
+}
+
+.site-content .sidebar .softwares .tags{
+    padding: 1rem;
+}
+
+.site-content .sidebar .softwares .tags .tag{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+    font-size: 1rem;
+}
+
+/*****************Side Bar*****************/
+
+/*------------Main Section--------------*/
+
+/****************Start Footer***************/
+
+footer.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container>div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white);
+}
+
+footer.footer .container p{
+    font-family: var(--Poppins);
+}
+
+footer.footer .contact span{
+    font-family: var(--Poppins);
+    font-size: 0.7rem;
+    color: white;    
+}
+
+footer.footer .instagram div>img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0.4rem ;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family: var(--Poppins);
+}
+
+footer.footer .rights h4 a{
+    color: white;
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span{
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+/****************Start Footer***************/
+
+/*------------Viewport less then or equal to 1130px-------------*/
+
+@media only screen and (max-width:1130px){
+    .site-content .post-content>.post-image .post-info{
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .awards .post-info{
+        display: none !important;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/*------------Viewport less then or equal to 1130px-------------*/
+
+/*------------Viewport less then or equal to 750px-------------*/
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu,.nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/*------------Viewport less then or equal to 750px-------------*/
+
+/*------------Viewport less then or equal to 520px-------------*/
+
+@media only screen and (max-width:520px){
+    main .blog{
+        height: 125vh;
+    }
+
+    .site-content .post-content>.post-image .post-info{
+        display: none;
+    }
+
+    footer.footer .container>div{
+        padding: 1rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+
+}
+
+/*------------Viewport less then or equal to 520px-------------*/
+
+
+
+
